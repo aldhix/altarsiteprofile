@@ -50,7 +50,9 @@ Pada terminal lakukan perintah dibawah ini:
 Mengambil data situs profile /`site_profiles` dengan perintah `Altarsite::data()` atau `Altarsite::profile()`.
  
  contoh :
+ 
 `{{  Altarsite::data()->name }}`
 
 output:
+
 Altar
