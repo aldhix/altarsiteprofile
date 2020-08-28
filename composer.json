@@ -1,0 +1,27 @@
+{
+    "name": "aldhix/altarsiteprofile",
+    "description": "Paket Profile Situs",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aldhi Xar",
+            "email": "aldhi.x@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Aldhix\\Altarsite\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aldhix\\Altarsiteprofile\\ServiceProvider"
+            ],
+            "aliases": {
+                "Altarsite": "Aldhix\\Altarsiteprofile\\Altarsite"
+            }
+        }
+    }
+}
