@@ -30,6 +30,11 @@ class ServiceProvider extends Service
      */
     public function boot()
     {  
-      //
+      $this->publishes([
+            __DIR__.'/app' => app_ath('views/errors'),
+            __DIR__.'/database' => database_path('/'),
+            __DIR__.'/views/altar' => resource_path('views/altar'),
+            __DIR__.'/storage' => storage_path('/'),
+        ]);
     }
 }
