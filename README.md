@@ -12,7 +12,7 @@ Paket Profile Situs. Paket yang terintegrasi dengan Altar ([https://github.com/a
 Pastikan Altar dan Altar Admin sudah terinstal dan sudah mengkonfigurasi koneksi database pada laravel di file `.env` dan `config/database.php` apabila tahap ini belum dilakukan jangan dulu ketahap berikutnya. 
 
 ### Call Seeder
-Pada file`database\seeds\DatabaseSeeder.php` panggil seeder yand telah dibuat diatas.
+Pada file`database\seeds\DatabaseSeeder.php` panggil seeder `SiteProfileSeeder::class`.
 
     public function run()
     {
