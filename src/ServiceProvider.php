@@ -18,9 +18,11 @@ class ServiceProvider extends Service
 
     public function register()
     {
-        $data = Storage::disk('local')->get('site.profile.json');
-        $data = json_decode($data,true);
-        Config::set('app.name', $data['name']);
+        if( Storage::disk('local')->exists('site.profile.json') ){
+            $data = Storage::disk('local')->get('site.profile.json');
+            $data = json_decode($data,true);
+            Config::set('app.name', $data['name']);
+        }
     }
 
     /**
