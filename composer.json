@@ -1,6 +1,10 @@
 {
     "name": "aldhix/altarsiteprofile",
     "description": "Paket Profile Situs",
+    "keywords": [
+        "aldhix",
+        "altarsiteprofile"
+    ],
     "type": "library",
     "license": "MIT",
     "authors": [
