@@ -11,16 +11,14 @@ Paket Profile Situs. Paket yang terintegrasi dengan Altar ([https://github.com/a
 ## Instalasi
 Pastikan Altar dan Altar Admin sudah terinstal dan sudah mengkonfigurasi koneksi database pada laravel di file `.env` dan `config/database.php` apabila tahap ini belum dilakukan jangan dulu ketahap berikutnya. 
 
-### Call Seeder
-Pada file`database\seeds\DatabaseSeeder.php` panggil seeder `SiteProfileSeeder::class`.
+### Command
+Pada terminal lakukan perintah dibawah ini:
 
-    public function run()
-    {
-	     $this->call([
-       		AdminSeeder::class,
-       		SiteProfileSeeder::class
-       	]);
-    }
+    composer require aldhix/altarsiteprofile
+    php artisan vendor:publish --provider=Aldhix\Altarsiteprofile\ServiceProvider --force
+    composer dump-autoload
+    php artisan migrate:fresh
+    php artisan db:seed
 
 ### Routes
 Lakukan penambahan route pada `routes\web.php` tambahkan perintah.
@@ -33,15 +31,6 @@ Lakukan penambahan route pada `routes\web.php` tambahkan perintah.
     		Route::resource('admin', 'AdminController');
     	});	
     });
-
-### Command
-Pada terminal lakukan perintah dibawah ini:
-
-    composer require aldhix/altarsiteprofile
-    php artisan vendor:publish --provider=Aldhix\Altarsiteprofile\ServiceProvider --force
-    composer dump-autoload
-    php artisan migrate:fresh
-    php artisan db:seed
 
 ## Fitur
 
